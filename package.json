@@ -1,0 +1,29 @@
+{
+  "name": "slither-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "douglas.augusto.lira <douglas.augusto.lira@avanade.com>"
+  ],
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "http-server -a localhost build -p 9000 -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.12.8",
+    "http-server": "^0.6.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-html2js": "^0.4.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-ng-constant": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-usemin": "^0.3.23",
+    "jshint": "^2.9.2"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slither - By Douglas Lira</title>
+    <!-- build:js js/vendor.js -->
+    <script src="bower_components/phaser/build/phaser.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/slither-game.min.js -->
+    <script src="assets/js/game.js"></script>
+    <script src="assets/js/snake.js"></script>
+    <script src="assets/js/playerSnake.js"></script>
+    <script src="assets/js/botSnake.js"></script>
+    <script src="assets/js/eye.js"></script>
+    <script src="assets/js/eyePair.js"></script>
+    <script src="assets/js/shadow.js"></script>
+    <script src="assets/js/food.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <script type="text/javascript">
+        (function() {
+            var game = new Phaser.Game(800, 500, Phaser.AUTO, null);
+            game.state.add('Game', Game);
+            game.state.start('Game');
+        })();
+    </script>
+</body>
+</html>
