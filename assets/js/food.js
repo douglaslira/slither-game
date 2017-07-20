@@ -5,11 +5,11 @@
  * @param  {Number} x    coordinate
  * @param  {Number} y    coordinate
  */
-Food = function(game, x, y) {
+Food = function(game, x, y, color) {
     this.game = game;
     this.debug = false;
     this.sprite = this.game.add.sprite(x, y, 'food');
-    this.sprite.tint = 0xff0000;
+    this.sprite.tint = color;
 
     this.game.physics.p2.enable(this.sprite, this.debug);
     this.sprite.body.clearShapes();

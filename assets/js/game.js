@@ -1,4 +1,4 @@
-Game = function(game) {}
+Game = function(game) {};
 
 Game.prototype = {
     preload: function() {
@@ -32,7 +32,8 @@ Game.prototype = {
 
         //add food randomly
         for (var i = 0 ; i < 100 ; i++) {
-            this.initFood(Util.randomInt(-width, width), Util.randomInt(-height, height));
+            var color = Math.floor(Math.random()*16777215).toString(16);
+            this.initFood(Util.randomInt(-width, width), Util.randomInt(-height, height), color);
         }
 
         this.game.snakes = [];
@@ -74,8 +75,8 @@ Game.prototype = {
      * @param  {number} y y-coordinate
      * @return {Food}   food object created
      */
-    initFood: function(x, y) {
-        var f = new Food(this.game, x, y);
+    initFood: function(x, y, color) {
+        var f = new Food(this.game, x, y, color);
         f.sprite.body.setCollisionGroup(this.foodCollisionGroup);
         this.foodGroup.add(f.sprite);
         f.sprite.body.collides([this.snakeHeadCollisionGroup]);
